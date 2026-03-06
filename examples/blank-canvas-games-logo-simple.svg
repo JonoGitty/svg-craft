@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 550" role="img">
+  <title>Blank Canvas Games</title>
+  <style>
+    .stroke { fill: none; stroke: #1a1a1a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .fill   { fill: #1a1a1a; stroke: none; }
+  </style>
+
+  <!-- Circle border -->
+  <circle cx="250" cy="230" r="195" class="stroke" stroke-width="5"/>
+
+  <!-- Easel back leg -->
+  <line x1="340" y1="175" x2="370" y2="410" class="stroke"/>
+  <!-- Easel front legs -->
+  <line x1="290" y1="330" x2="270" y2="410" class="stroke"/>
+  <line x1="380" y1="330" x2="395" y2="410" class="stroke"/>
+  <!-- Easel cross brace -->
+  <line x1="278" y1="375" x2="388" y2="375" class="stroke" stroke-width="3"/>
+  <!-- Canvas shelf -->
+  <line x1="275" y1="328" x2="395" y2="328" class="stroke" stroke-width="3"/>
+  <!-- Canvas -->
+  <rect x="282" y="142" width="108" height="183" rx="2" class="stroke" fill="#fff"/>
+  <!-- Top peg -->
+  <rect x="330" y="130" width="12" height="16" rx="2" class="fill"/>
+
+  <!-- Stool legs -->
+  <line x1="140" y1="355" x2="125" y2="410" class="stroke"/>
+  <line x1="200" y1="355" x2="215" y2="410" class="stroke"/>
+  <!-- Stool brace -->
+  <line x1="132" y1="385" x2="208" y2="385" class="stroke" stroke-width="3"/>
+  <!-- Stool seat -->
+  <ellipse cx="170" cy="348" rx="44" ry="11" class="stroke" fill="#fff"/>
+
+  <!-- Cat silhouette -->
+  <path class="fill" d="
+    M155 178 L148 152 L170 172
+    C172 168, 192 165, 200 170
+    L205 150 L200 175
+    C210 180, 215 195, 210 210
+    L210 225
+    C220 220, 235 214, 248 210
+    L280 192
+    C284 188, 288 192, 284 196
+    L250 216
+    C245 220, 230 226, 215 232
+    L210 240
+    C212 270, 212 300, 210 330
+    C208 345, 195 352, 185 348
+    L180 345
+    C175 355, 155 355, 140 345
+    C130 320, 128 275, 140 240
+    C145 220, 155 210, 160 200
+    C155 192, 153 185, 155 178Z
+  "/>
+
+  <!-- White chest area -->
+  <path d="M195 235 C200 255, 202 280, 200 310 C198 330, 192 342, 186 346
+           C190 340, 195 320, 198 295 C200 270, 198 250, 195 235Z"
+        fill="#fff" opacity="0.3"/>
+
+  <!-- Ear inners -->
+  <path d="M157 176 L152 160 L166 174Z" fill="#fff" opacity="0.25"/>
+  <path d="M198 174 L202 157 L206 174Z" fill="#fff" opacity="0.25"/>
+
+  <!-- Eye -->
+  <ellipse cx="188" cy="192" rx="3.5" ry="4" fill="#fff"/>
+  <ellipse cx="189" cy="191.5" rx="1.5" ry="2" fill="#1a1a1a"/>
+
+  <!-- Nose -->
+  <path d="M193 200 L191 203 L195 203Z" fill="#fff" opacity="0.5"/>
+
+  <!-- Whiskers -->
+  <g stroke="#fff" stroke-width="1" opacity="0.4">
+    <line x1="196" y1="200" x2="218" y2="196"/>
+    <line x1="196" y1="202" x2="220" y2="203"/>
+    <line x1="196" y1="205" x2="216" y2="210"/>
+  </g>
+
+  <!-- Tail -->
+  <path d="M135 345 C115 355, 92 385, 88 415 C86 428, 100 430, 108 418 C118 400, 125 375, 138 355"
+        class="fill"/>
+
+  <!-- Palette outline -->
+  <ellipse cx="310" cy="408" rx="38" ry="16" class="stroke" fill="#fff" transform="rotate(-5 310 408)"/>
+  <ellipse cx="296" cy="405" rx="5" ry="3.5" class="fill"/>
+  <!-- Paint dots -->
+  <circle cx="308" cy="399" r="4" class="fill"/>
+  <circle cx="320" cy="397" r="3.5" class="fill"/>
+  <circle cx="332" cy="401" r="3" class="fill"/>
+  <circle cx="324" cy="411" r="3.5" class="fill"/>
+  <circle cx="310" cy="414" r="3" class="fill"/>
+
+  <!-- Palette brush -->
+  <line x1="338" y1="418" x2="358" y2="400" class="stroke" stroke-width="2.5"/>
+
+  <!-- Text -->
+  <text x="250" y="480" text-anchor="middle"
+        font-family="'Arial Black', 'Impact', sans-serif"
+        font-weight="900" font-size="42" fill="#1a1a1a"
+        letter-spacing="2">BLANK CANVAS GAMES</text>
+</svg>

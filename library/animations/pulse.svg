@@ -1,0 +1,14 @@
+<!-- snippet: animation-pulse -->
+<!-- tags: animation, pulse, glow, attention, notification -->
+<!-- usage: wrap any element with this animation class -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" role="img">
+  <title>Notification pulse</title>
+  <style>
+    @keyframes pulse { 0%,100% { opacity: 1; r: 8; } 50% { opacity: 0.6; r: 12; } }
+    @keyframes ring { 0% { opacity: 0.6; r: 8; } 100% { opacity: 0; r: 22; } }
+    .pulse-dot { fill: #7c6ff7; animation: pulse 2s ease-in-out infinite; }
+    .pulse-ring { fill: none; stroke: #7c6ff7; stroke-width: 2; animation: ring 2s ease-out infinite; }
+  </style>
+  <circle class="pulse-ring" cx="25" cy="25" r="8"/>
+  <circle class="pulse-dot" cx="25" cy="25" r="8"/>
+</svg>

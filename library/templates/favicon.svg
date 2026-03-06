@@ -1,0 +1,12 @@
+<!-- template: favicon -->
+<!-- tags: template, favicon, icon, 32x32, browser tab -->
+<!-- notes: Design at 32x32 viewBox. Must read clearly at 16x16. -->
+<!--         Keep shapes bold, avoid thin strokes. Max 2-3 colours. -->
+<!--         Test: save as .svg, open in browser tab. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img">
+  <title>Favicon</title>
+  <!-- Background (optional — remove for transparent) -->
+  <rect width="32" height="32" rx="6" fill="#1a1a1e"/>
+  <!-- Icon content — keep bold and simple -->
+  <text x="16" y="22" text-anchor="middle" font-family="system-ui" font-weight="900" font-size="18" fill="#7c6ff7">?</text>
+</svg>

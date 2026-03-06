@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img">
+  <title>Blank Canvas Games</title>
+  <!-- Concept D: Bold "BCG" monogram with paint splashes -->
+  <defs>
+    <linearGradient id="splash-d" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c6ff7"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="8" y="8" width="184" height="184" rx="36" fill="#1a1a1e"/>
+
+  <!-- Paint splash behind letters -->
+  <path d="
+    M40 80 C50 50, 90 30, 130 40
+    C160 48, 180 70, 170 100
+    C164 130, 140 160, 110 168
+    C80 178, 40 160, 36 130
+    C30 110, 34 90, 40 80 Z
+  " fill="url(#splash-d)" opacity="0.15"/>
+
+  <!-- Splatter dots -->
+  <circle cx="42" cy="56" r="6" fill="#7c6ff7" opacity="0.3"/>
+  <circle cx="164" cy="52" r="4" fill="#22d3ee" opacity="0.3"/>
+  <circle cx="170" cy="148" r="5" fill="#7c6ff7" opacity="0.2"/>
+  <circle cx="36" cy="152" r="3.5" fill="#22d3ee" opacity="0.3"/>
+  <circle cx="156" cy="100" r="3" fill="#38bdf8" opacity="0.25"/>
+
+  <!-- BCG Letters -->
+  <text x="100" y="125" text-anchor="middle"
+        font-family="'Arial Black', 'Impact', system-ui" font-weight="900"
+        font-size="72" fill="#e8e8ec" letter-spacing="-2">BCG</text>
+
+  <!-- Underline brushstroke -->
+  <path d="M44 140 C60 144, 120 148, 160 138"
+        stroke="url(#splash-d)" stroke-width="5" stroke-linecap="round" fill="none"/>
+</svg>

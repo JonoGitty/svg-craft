@@ -1,0 +1,17 @@
+<!-- template: icon-set-base -->
+<!-- tags: template, icon, set, 24x24, consistent -->
+<!-- notes: Base template for creating consistent icon sets. -->
+<!--         All icons share: 24x24 viewBox, 2px stroke, round caps/joins -->
+<!--         Duplicate this file for each icon in your set. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img"
+     fill="none" stroke="currentColor" stroke-width="2"
+     stroke-linecap="round" stroke-linejoin="round">
+  <title>Icon name</title>
+  <!-- Draw your icon here using stroke-based shapes -->
+  <!-- Examples:
+    <circle cx="12" cy="12" r="9"/>
+    <polyline points="9 11 12 14 15 11"/>
+    <line x1="12" y1="8" x2="12" y2="14"/>
+    <path d="M3 12 L12 3 L21 12"/>
+  -->
+</svg>

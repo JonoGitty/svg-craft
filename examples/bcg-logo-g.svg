@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img">
+  <title>Blank Canvas Games</title>
+  <!-- Concept G: Paint tube squeezing out a game world -->
+  <defs>
+    <linearGradient id="squeeze-g" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#7c6ff7"/>
+      <stop offset="40%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Paint tube body -->
+  <path d="
+    M28 50 L28 28 C28 22, 34 18, 40 18 L60 18 C66 18, 72 22, 72 28 L72 50
+  " fill="#e8e8ec" stroke="#9e9ea8" stroke-width="1.5"/>
+  <!-- Tube cap -->
+  <rect x="38" y="8" width="24" height="12" rx="4" fill="#9e9ea8"/>
+  <!-- Tube crimp lines -->
+  <line x1="32" y1="24" x2="68" y2="24" stroke="#9e9ea8" stroke-width="1" opacity="0.5"/>
+  <line x1="30" y1="28" x2="70" y2="28" stroke="#9e9ea8" stroke-width="1" opacity="0.5"/>
+  <!-- Tube bottom (squeezed) -->
+  <path d="M28 50 C28 56, 36 60, 50 60 C64 60, 72 56, 72 50" fill="#e8e8ec" stroke="#9e9ea8" stroke-width="1.5"/>
+
+  <!-- Paint flowing out -->
+  <path d="
+    M50 60
+    C50 68, 44 76, 48 84
+    C52 92, 60 88, 66 96
+    C72 106, 58 112, 64 122
+    C70 132, 80 136, 86 130
+    C94 122, 88 140, 100 148
+    C110 154, 120 142, 128 150
+    C138 160, 148 168, 160 164
+    C170 160, 178 168, 180 178
+    C182 186, 176 192, 168 188
+    C140 186, 100 188, 70 182
+    C48 178, 36 168, 36 152
+    C36 138, 46 132, 42 122
+    C38 112, 30 108, 34 96
+    C38 86, 46 80, 42 70
+    C40 64, 46 62, 50 60
+    Z
+  " fill="url(#squeeze-g)" opacity="0.85"/>
+
+  <!-- Game elements floating in the paint -->
+  <!-- Die -->
+  <rect x="58" y="138" width="16" height="16" rx="3" fill="#fff" opacity="0.85" transform="rotate(-10 66 146)"/>
+  <circle cx="62" cy="142" r="1.5" fill="#7c6ff7"/>
+  <circle cx="70" cy="142" r="1.5" fill="#7c6ff7"/>
+  <circle cx="62" cy="150" r="1.5" fill="#7c6ff7"/>
+  <circle cx="70" cy="150" r="1.5" fill="#7c6ff7"/>
+
+  <!-- Star -->
+  <path d="M110 168 L112 162 L118 162 L114 166 L115 172 L110 169 L105 172 L106 166 L102 162 L108 162 Z" fill="#fff" opacity="0.8"/>
+
+  <!-- Heart -->
+  <path d="M140 158 C138 155, 134 153, 134 150 C134 147, 137 146, 140 149 C143 146, 146 147, 146 150 C146 153, 142 155, 140 158 Z" fill="#fff" opacity="0.8"/>
+
+  <!-- Circle token -->
+  <circle cx="86" cy="172" r="6" fill="#fff" opacity="0.7"/>
+  <circle cx="86" cy="172" r="3" fill="#22d3ee" opacity="0.6"/>
+</svg>

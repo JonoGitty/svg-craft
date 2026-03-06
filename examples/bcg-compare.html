@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>BCG Silhouette Comparison</title>
+<style>
+  body { background: #f5f5f5; font-family: system-ui; margin: 0; padding: 24px; }
+  h1 { text-align: center; color: #333; margin-bottom: 8px; }
+  p.sub { text-align: center; color: #888; margin-top: 0; }
+  .row { display: flex; gap: 32px; justify-content: center; align-items: flex-end; margin: 32px 0; flex-wrap: wrap; }
+  .variant { text-align: center; }
+  .variant h2 { font-size: 14px; color: #666; margin-bottom: 8px; }
+  .sizes { display: flex; gap: 16px; align-items: flex-end; justify-content: center; }
+  .sizes img { display: block; }
+  .label { font-size: 11px; color: #999; margin-top: 4px; }
+  .dark-bg { background: #1a1a2e; padding: 32px; border-radius: 16px; margin: 32px 0; }
+  .dark-bg h2 { color: #e8e8ec; text-align: center; font-size: 14px; margin-bottom: 16px; }
+  .dark-bg .sizes img { filter: invert(1); }
+  .circle-bg { background: #0b1220; padding: 32px; border-radius: 16px; margin: 32px 0; }
+  .circle-bg h2 { color: #cbd5e1; text-align: center; font-size: 14px; margin-bottom: 16px; }
+  .circle-bg .sizes img { filter: invert(1); }
+</style>
+</head>
+<body>
+<h1>BCG Silhouette Logo - Pick a Direction</h1>
+<p class="sub">Disney-style silhouette: cat at easel, instantly recognizable at any size</p>
+
+<div class="row">
+  <div class="variant">
+    <h2>V1 — Circle frame</h2>
+    <div class="sizes">
+      <div><img src="bcg-silhouette-v1.svg" width="200" height="200"/><div class="label">200px</div></div>
+      <div><img src="bcg-silhouette-v1.svg" width="80" height="80"/><div class="label">80px</div></div>
+      <div><img src="bcg-silhouette-v1.svg" width="32" height="32"/><div class="label">32px</div></div>
+      <div><img src="bcg-silhouette-v1.svg" width="16" height="16"/><div class="label">16px</div></div>
+    </div>
+  </div>
+
+  <div class="variant">
+    <h2>V2 — Standalone, taller</h2>
+    <div class="sizes">
+      <div><img src="bcg-silhouette-v2.svg" width="180" height="200"/><div class="label">200px</div></div>
+      <div><img src="bcg-silhouette-v2.svg" width="72" height="80"/><div class="label">80px</div></div>
+      <div><img src="bcg-silhouette-v2.svg" width="29" height="32"/><div class="label">32px</div></div>
+      <div><img src="bcg-silhouette-v2.svg" width="14" height="16"/><div class="label">16px</div></div>
+    </div>
+  </div>
+
+  <div class="variant">
+    <h2>V3 — Wide, chunky</h2>
+    <div class="sizes">
+      <div><img src="bcg-silhouette-v3.svg" width="240" height="200"/><div class="label">200px</div></div>
+      <div><img src="bcg-silhouette-v3.svg" width="96" height="80"/><div class="label">80px</div></div>
+      <div><img src="bcg-silhouette-v3.svg" width="38" height="32"/><div class="label">32px</div></div>
+      <div><img src="bcg-silhouette-v3.svg" width="19" height="16"/><div class="label">16px</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="dark-bg">
+  <h2>On dark background (inverted to white — like your site themes)</h2>
+  <div class="row" style="margin:0">
+    <div class="variant">
+      <div class="sizes">
+        <div><img src="bcg-silhouette-v1.svg" width="160" height="160"/><div class="label" style="color:#666">V1</div></div>
+        <div><img src="bcg-silhouette-v2.svg" width="144" height="160"/><div class="label" style="color:#666">V2</div></div>
+        <div><img src="bcg-silhouette-v3.svg" width="192" height="160"/><div class="label" style="color:#666">V3</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="circle-bg">
+  <h2>At favicon size on links-site background (#0b1220)</h2>
+  <div class="row" style="margin:0">
+    <div class="sizes">
+      <div><img src="bcg-silhouette-v1.svg" width="32" height="32" style="filter:invert(1)"/><div class="label" style="color:#666">V1 32px</div></div>
+      <div><img src="bcg-silhouette-v2.svg" width="29" height="32" style="filter:invert(1)"/><div class="label" style="color:#666">V2 32px</div></div>
+      <div><img src="bcg-silhouette-v3.svg" width="38" height="32" style="filter:invert(1)"/><div class="label" style="color:#666">V3 32px</div></div>
+      <div><img src="bcg-silhouette-v1.svg" width="16" height="16" style="filter:invert(1)"/><div class="label" style="color:#666">V1 16px</div></div>
+      <div><img src="bcg-silhouette-v2.svg" width="14" height="16" style="filter:invert(1)"/><div class="label" style="color:#666">V2 16px</div></div>
+      <div><img src="bcg-silhouette-v3.svg" width="19" height="16" style="filter:invert(1)"/><div class="label" style="color:#666">V3 16px</div></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

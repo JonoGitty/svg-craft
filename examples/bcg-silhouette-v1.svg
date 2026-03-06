@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img">
+  <title>Blank Canvas Games - Cat at easel silhouette</title>
+  <!-- V1: Full scene silhouette inside circle -->
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+  <g fill="#1a1a1a">
+    <!-- Cat body, head, ears, tail as one unified shape -->
+    <path d="
+      M58 68 L52 48 L66 62
+      C68 58, 80 55, 86 58
+      L90 42 L88 63
+      C95 66, 100 75, 98 85
+      L98 92
+      C105 88, 115 84, 125 82
+      L138 72
+      C141 69, 144 73, 140 76
+      L128 84
+      C122 88, 110 92, 100 96
+      L98 100
+      C100 115, 100 130, 98 145
+      C96 152, 88 156, 82 152
+      L78 150
+      C74 158, 60 158, 52 150
+      C44 135, 42 112, 50 92
+      C54 82, 58 76, 62 72
+      C60 68, 58 68, 58 68Z
+    "/>
+    <!-- Tail -->
+    <path d="M48 148 C35 155, 22 170, 20 180 C19 186, 28 187, 33 182 C40 174, 44 164, 50 155"/>
+    <!-- Easel -->
+    <path d="
+      M120 60 L120 155
+      M150 60 L150 155
+      M115 62 L155 62
+      M115 58 L155 58 L155 62 L115 62Z
+      M135 60 L145 170
+      M125 60 L115 170
+      M135 60 L155 170
+      M118 135 L152 135
+    "/>
+    <!-- Canvas (white negative space) -->
+    <rect x="118" y="62" width="34" height="50" fill="#fff"/>
+    <!-- Stool seat -->
+    <ellipse cx="67" cy="148" rx="20" ry="5"/>
+    <!-- Stool legs -->
+    <path d="M52 152 L47 172 M82 152 L87 172 M50 164 L84 164" stroke="#1a1a1a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

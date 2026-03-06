@@ -1,0 +1,14 @@
+<!-- snippet: animation-spinner -->
+<!-- tags: animation, spinner, loading, rotate -->
+<!-- usage: standalone loading spinner, or copy the style into your SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" role="img">
+  <title>Loading</title>
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner-track { fill: none; stroke: #e8e8ec; stroke-width: 4; opacity: 0.2; }
+    .spinner-head { fill: none; stroke: #7c6ff7; stroke-width: 4; stroke-linecap: round;
+      stroke-dasharray: 80, 200; animation: spin 1s linear infinite; transform-origin: center; }
+  </style>
+  <circle class="spinner-track" cx="25" cy="25" r="20"/>
+  <circle class="spinner-head" cx="25" cy="25" r="20"/>
+</svg>

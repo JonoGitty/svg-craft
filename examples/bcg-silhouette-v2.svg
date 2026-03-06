@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img">
+  <title>Blank Canvas Games - Cat at easel silhouette</title>
+  <!-- V2: No circle, standalone silhouette, bolder proportions -->
+  <g fill="#1a1a1a">
+    <!-- Cat: single unified path - body, head, ears -->
+    <path d="
+      M62 82 L54 52 C53 50, 55 49, 56 50 L72 72
+      C76 66, 88 62, 94 66
+      L98 46 C99 44, 101 45, 100 47 L96 72
+      C106 76, 112 88, 108 102
+      C108 100, 112 96, 118 93
+      C124 89, 134 86, 142 84
+      L150 78 C154 76, 156 80, 152 82
+      L140 88 C132 92, 120 97, 110 101
+      L108 106
+      C110 124, 110 142, 108 158
+      C106 168, 96 172, 88 166
+      C86 170, 76 172, 66 166
+      C54 150, 50 124, 56 104
+      C60 92, 62 86, 62 82Z
+    "/>
+    <!-- Tail - sweeping curve -->
+    <path d="
+      M58 160 C42 168, 26 184, 24 198
+      C23 206, 34 206, 38 198
+      C44 186, 50 174, 58 165
+    "/>
+    <!-- Easel - clean geometric -->
+    <rect x="124" y="66" width="44" height="6" rx="1"/>
+    <rect x="128" y="72" width="36" height="56" rx="1" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+    <!-- Easel legs -->
+    <path d="M128 128 L118 186 M164 128 L174 186 M146 72 L158 186"
+          stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <line x1="122" y1="160" x2="170" y2="160" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+    <!-- Canvas shelf -->
+    <rect x="124" y="126" width="44" height="5" rx="1"/>
+    <!-- Stool -->
+    <ellipse cx="74" cy="162" rx="22" ry="6"/>
+    <path d="M56 166 L50 190 M92 166 L98 190" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <line x1="54" y1="180" x2="95" y2="180" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+    <!-- Paintbrush in paw (simple line) -->
+    <line x1="118" y1="93" x2="148" y2="80" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

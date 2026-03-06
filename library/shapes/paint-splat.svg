@@ -1,0 +1,20 @@
+<!-- snippet: shape-paint-splat -->
+<!-- tags: shape, splat, splash, decorative, organic, paint -->
+<!-- usage: decorative paint splash, scale and colour as needed -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="
+    M50 15 C60 10, 75 15, 80 28
+    C85 40, 78 48, 85 55
+    C92 62, 88 75, 78 80
+    C68 85, 62 78, 55 85
+    C48 92, 38 88, 30 80
+    C22 72, 18 60, 22 50
+    C26 40, 20 32, 28 24
+    C36 16, 42 20, 50 15 Z
+  " fill="currentColor"/>
+  <!-- Splatter dots -->
+  <circle cx="88" cy="38" r="4" fill="currentColor"/>
+  <circle cx="15" cy="68" r="3" fill="currentColor"/>
+  <circle cx="72" cy="90" r="3.5" fill="currentColor"/>
+  <circle cx="25" cy="22" r="2.5" fill="currentColor"/>
+</svg>

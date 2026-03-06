@@ -1,0 +1,7 @@
+<!-- snippet: shape-frame -->
+<!-- tags: shape, frame, border, canvas, picture -->
+<!-- usage: wrap content inside the frame, white center for content -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect x="10" y="10" width="180" height="180" rx="6" fill="none" stroke="currentColor" stroke-width="6"/>
+  <rect x="22" y="22" width="156" height="156" rx="2" fill="#fff"/>
+</svg>

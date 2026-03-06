@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img">
+  <title>Blank Canvas Games</title>
+  <!-- Concept A: Canvas frame with play button painted inside -->
+  <defs>
+    <linearGradient id="brush-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c6ff7"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas/frame outer -->
+  <rect x="30" y="30" width="140" height="140" rx="6" fill="none" stroke="#e8e8ec" stroke-width="8"/>
+
+  <!-- Inner canvas area -->
+  <rect x="46" y="46" width="108" height="108" rx="2" fill="#fafafa"/>
+
+  <!-- Brushstroke swoosh across canvas - forms a play triangle -->
+  <path d="
+    M76 62
+    C78 60, 82 58, 84 60
+    L134 96
+    C140 100, 140 104, 134 108
+    L84 144
+    C80 146, 76 144, 76 140
+    Z
+  " fill="url(#brush-a)" opacity="0.9"/>
+
+  <!-- Paint drip from bottom of canvas -->
+  <path d="M100 154 C100 154, 98 170, 100 180 C102 186, 106 186, 106 180 C106 172, 104 160, 102 154" fill="url(#brush-a)" opacity="0.6"/>
+
+  <!-- Small paint splatter dots -->
+  <circle cx="48" cy="48" r="4" fill="#7c6ff7" opacity="0.5"/>
+  <circle cx="156" cy="152" r="3" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="152" cy="44" r="2.5" fill="#7c6ff7" opacity="0.4"/>
+</svg>

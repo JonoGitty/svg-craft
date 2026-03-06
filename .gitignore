@@ -23,8 +23,20 @@ references/
 *.sketch
 *.fig
 
-# Allow example SVGs but ignore working SVGs in root
+# Allow example SVGs and library SVGs but ignore working SVGs in root
 /*.svg
+
+# Personal palettes (may reveal client sites)
+library/palettes/*
+!library/palettes/.gitkeep
+
+# Personal icon collections
+library/icons/*
+!library/icons/.gitkeep
+
+# Temp files from tools
+/tmp/
+*.bmp
 
 # OS files
 .DS_Store

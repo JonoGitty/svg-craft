@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img">
+  <title>Blank Canvas Games</title>
+  <!-- Concept F: Brushstroke that forms a play button - minimal, bold -->
+  <defs>
+    <linearGradient id="brush-f" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c6ff7"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Single expressive brushstroke forming a play triangle -->
+  <path d="
+    M52 30
+    C48 28, 44 32, 46 38
+    L46 158
+    C44 166, 50 172, 56 168
+    L156 106
+    C164 102, 166 94, 158 90
+    L56 34
+    C54 32, 52 30, 52 30
+    Z
+  " fill="url(#brush-f)"/>
+
+  <!-- Paint texture: rough edges as small shapes -->
+  <circle cx="46" cy="34" r="4" fill="#7c6ff7" opacity="0.6"/>
+  <circle cx="44" cy="162" r="5" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="160" cy="98" r="4" fill="#22d3ee" opacity="0.5"/>
+  <ellipse cx="50" cy="90" rx="3" ry="6" fill="#7c6ff7" opacity="0.2"/>
+  <circle cx="158" cy="104" r="2" fill="#38bdf8" opacity="0.4"/>
+
+  <!-- Subtle splatter -->
+  <circle cx="170" cy="82" r="2.5" fill="#7c6ff7" opacity="0.3"/>
+  <circle cx="168" cy="114" r="2" fill="#22d3ee" opacity="0.3"/>
+  <circle cx="38" cy="170" r="2" fill="#7c6ff7" opacity="0.3"/>
+</svg>

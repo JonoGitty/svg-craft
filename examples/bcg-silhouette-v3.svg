@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" role="img">
+  <title>Blank Canvas Games - Cat at easel silhouette</title>
+  <!-- V3: Wider composition, chunky Disney-style, everything one connected shape where possible -->
+  <g fill="#1a1a1a">
+    <!-- The cat - one bold shape -->
+    <path d="
+      M70 90
+      L60 54 C59 51, 62 50, 63 52 L76 76
+      C80 70, 92 66, 100 70
+      L106 48 C107 45, 110 47, 109 50 L104 76
+      C114 80, 120 92, 118 108
+      L120 106
+      C128 100, 140 96, 152 94
+      L162 90
+      C166 88, 168 92, 164 94
+      L152 98
+      C144 102, 130 108, 120 112
+      L118 116
+      C120 134, 120 152, 118 166
+      C116 174, 108 178, 100 174
+      L96 172
+      C90 178, 76 178, 68 172
+      C56 156, 52 132, 60 112
+      C64 100, 68 94, 70 90
+      Z
+    "/>
+    <!-- Fluffy tail -->
+    <path d="
+      M60 168
+      C44 176, 28 192, 26 206
+      C24 214, 36 216, 40 208
+      C48 194, 54 182, 62 172
+      Z
+    "/>
+    <!-- Easel as one shape -->
+    <path d="
+      M155 68 L195 68 L195 74 L191 74 L191 138 L195 138 L195 144 L155 144 L155 138 L159 138 L159 74 L155 74 Z
+    " fill-rule="evenodd"/>
+    <!-- Canvas (white cutout) -->
+    <rect x="162" y="76" width="26" height="60" rx="1" fill="#fff"/>
+    <!-- Easel top clamp -->
+    <rect x="172" y="62" width="8" height="10" rx="2"/>
+    <!-- Easel legs -->
+    <path d="M160 144 L148 194 M190 144 L202 194 M175 68 L188 194"
+          stroke="#1a1a1a" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <!-- Easel cross-brace -->
+    <line x1="152" y1="174" x2="198" y2="174" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+    <!-- Stool -->
+    <ellipse cx="82" cy="170" rx="26" ry="7"/>
+    <path d="M60 175 L52 198 M104 175 L112 198" stroke="#1a1a1a" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <line x1="56" y1="190" x2="108" y2="190" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

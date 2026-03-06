@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 550" role="img">
+  <title>Blank Canvas Games - Cat painting on easel logo</title>
+  <defs>
+    <clipPath id="circle-clip">
+      <circle cx="250" cy="230" r="195"/>
+    </clipPath>
+    <linearGradient id="fur-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6b6b7b"/>
+      <stop offset="100%" stop-color="#4a4a58"/>
+    </linearGradient>
+    <linearGradient id="fur-light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e4df"/>
+      <stop offset="100%" stop-color="#d5d0c8"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#c49a6c"/>
+      <stop offset="50%" stop-color="#a37840"/>
+      <stop offset="100%" stop-color="#8b6530"/>
+    </linearGradient>
+    <linearGradient id="wood-dark" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#a37840"/>
+      <stop offset="100%" stop-color="#6d4e25"/>
+    </linearGradient>
+    <linearGradient id="canvas-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf8f5"/>
+      <stop offset="100%" stop-color="#f0ece5"/>
+    </linearGradient>
+    <linearGradient id="floor-shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e4dc"/>
+      <stop offset="100%" stop-color="#f5f2ed"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circle border -->
+  <circle cx="250" cy="230" r="195" fill="none" stroke="#1a1a1a" stroke-width="5"/>
+
+  <!-- Clipped scene -->
+  <g clip-path="url(#circle-clip)">
+
+    <!-- Background -->
+    <rect x="0" y="0" width="500" height="460" fill="#fdfcfa"/>
+
+    <!-- Floor / ground shadow area -->
+    <ellipse cx="250" cy="400" rx="200" ry="40" fill="url(#floor-shadow)"/>
+
+    <!-- === EASEL === -->
+    <g id="easel">
+      <!-- Back leg -->
+      <line x1="340" y1="175" x2="370" y2="410" stroke="#8b6530" stroke-width="7" stroke-linecap="round"/>
+
+      <!-- Front left leg -->
+      <line x1="290" y1="330" x2="270" y2="410" stroke="url(#wood)" stroke-width="8" stroke-linecap="round"/>
+      <!-- Front right leg -->
+      <line x1="380" y1="330" x2="395" y2="410" stroke="url(#wood)" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- Cross brace -->
+      <line x1="278" y1="375" x2="388" y2="375" stroke="url(#wood)" stroke-width="5" stroke-linecap="round"/>
+
+      <!-- Canvas shelf / ledge -->
+      <rect x="275" y="322" width="120" height="10" rx="2" fill="url(#wood-dark)"/>
+
+      <!-- Canvas -->
+      <rect x="280" y="140" width="110" height="185" rx="2" fill="url(#canvas-grad)" stroke="#d8d4cc" stroke-width="1.5"/>
+
+      <!-- Top peg -->
+      <rect x="328" y="128" width="14" height="18" rx="3" fill="#b8935a" stroke="#8b6530" stroke-width="1"/>
+    </g>
+
+    <!-- === STOOL === -->
+    <g id="stool">
+      <!-- Stool legs -->
+      <line x1="140" y1="355" x2="125" y2="410" stroke="url(#wood)" stroke-width="7" stroke-linecap="round"/>
+      <line x1="200" y1="355" x2="215" y2="410" stroke="url(#wood)" stroke-width="7" stroke-linecap="round"/>
+      <!-- Stool cross brace -->
+      <line x1="132" y1="385" x2="208" y2="385" stroke="url(#wood)" stroke-width="4" stroke-linecap="round"/>
+      <!-- Stool seat -->
+      <ellipse cx="170" cy="350" rx="45" ry="12" fill="url(#wood-dark)" stroke="#6d4e25" stroke-width="1"/>
+      <ellipse cx="170" cy="347" rx="45" ry="12" fill="url(#wood)"/>
+    </g>
+
+    <!-- === CAT === -->
+    <g id="cat">
+      <!-- Tail (behind body, curving down and left) -->
+      <path d="M130 340 C110 350, 90 380, 85 410 C82 425, 95 430, 105 420 C115 405, 120 380, 135 360"
+            fill="url(#fur-dark)" stroke="#3a3a48" stroke-width="1"/>
+      <!-- Tail fur highlights -->
+      <path d="M125 345 C110 355, 95 380, 92 405"
+            fill="none" stroke="#8a8a98" stroke-width="2" opacity="0.5"/>
+
+      <!-- Body - main dark grey back -->
+      <path d="M140 340 C130 310, 130 270, 145 240
+               C155 220, 165 210, 175 205
+               L190 210 C195 230, 195 260, 195 280
+               C195 310, 190 330, 185 345
+               C180 355, 155 355, 140 340Z"
+            fill="url(#fur-dark)"/>
+
+      <!-- Body - white chest/belly -->
+      <path d="M185 345 C190 330, 195 300, 195 275
+               C195 255, 192 235, 190 220
+               L200 225 C205 240, 210 260, 210 285
+               C210 310, 205 335, 195 350
+               C192 355, 187 352, 185 345Z"
+            fill="url(#fur-light)"/>
+
+      <!-- Fur texture strokes on body -->
+      <g stroke="#555565" stroke-width="0.8" fill="none" opacity="0.4">
+        <path d="M145 260 C148 265, 150 275, 148 285"/>
+        <path d="M155 250 C157 258, 158 268, 156 280"/>
+        <path d="M140 290 C143 298, 144 308, 142 318"/>
+        <path d="M160 270 C162 280, 163 290, 161 300"/>
+        <path d="M150 300 C153 310, 152 320, 150 335"/>
+      </g>
+
+      <!-- White chest fur detail -->
+      <g stroke="#c8c4bc" stroke-width="0.8" fill="none" opacity="0.5">
+        <path d="M195 250 C198 260, 200 270, 199 280"/>
+        <path d="M200 265 C203 275, 204 285, 202 295"/>
+      </g>
+
+      <!-- Head -->
+      <ellipse cx="178" cy="198" rx="32" ry="28" fill="url(#fur-dark)"/>
+
+      <!-- White face patch -->
+      <path d="M175 205 C168 200, 165 195, 168 188
+               C172 182, 182 180, 188 185
+               C194 190, 195 198, 190 205
+               C186 210, 180 210, 175 205Z"
+            fill="url(#fur-light)" opacity="0.6"/>
+
+      <!-- Left ear -->
+      <path d="M155 178 L148 155 L168 172Z" fill="url(#fur-dark)" stroke="#3a3a48" stroke-width="1"/>
+      <path d="M157 177 L152 160 L165 174Z" fill="#c4a0a0" opacity="0.5"/>
+
+      <!-- Right ear -->
+      <path d="M195 175 L200 152 L207 172Z" fill="url(#fur-dark)" stroke="#3a3a48" stroke-width="1"/>
+      <path d="M197 174 L201 158 L205 173Z" fill="#c4a0a0" opacity="0.5"/>
+
+      <!-- Eye -->
+      <ellipse cx="185" cy="193" rx="4" ry="4.5" fill="#3a5a3a"/>
+      <ellipse cx="186" cy="192" rx="1.5" ry="1.5" fill="#1a1a1a"/>
+      <circle cx="187" cy="191" r="0.8" fill="#fff"/>
+
+      <!-- Nose -->
+      <path d="M190 200 L188 203 L192 203Z" fill="#e8a0a0"/>
+
+      <!-- Mouth hint -->
+      <path d="M190 203 C189 206, 187 207, 185 206" fill="none" stroke="#555" stroke-width="0.7"/>
+
+      <!-- Whiskers -->
+      <g stroke="#888" stroke-width="0.6" fill="none">
+        <line x1="193" y1="200" x2="220" y2="196"/>
+        <line x1="193" y1="202" x2="222" y2="203"/>
+        <line x1="193" y1="204" x2="218" y2="210"/>
+      </g>
+
+      <!-- === PAINTING ARM (right arm reaching to canvas) === -->
+      <!-- Upper arm -->
+      <path d="M195 230 C205 225, 220 218, 240 212
+               C245 210, 248 214, 243 218
+               C225 226, 210 232, 200 238Z"
+            fill="url(#fur-light)" stroke="#bbb5ab" stroke-width="0.5"/>
+
+      <!-- Paw holding brush -->
+      <ellipse cx="245" cy="213" rx="10" ry="7" fill="#e0dbd4" stroke="#bbb5ab" stroke-width="0.8" transform="rotate(-15 245 213)"/>
+
+      <!-- Paintbrush -->
+      <g id="paintbrush">
+        <!-- Handle -->
+        <line x1="240" y1="218" x2="275" y2="195" stroke="#d4a04a" stroke-width="4" stroke-linecap="round"/>
+        <!-- Ferrule -->
+        <line x1="275" y1="195" x2="280" y2="192" stroke="#aaa" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- Bristles -->
+        <path d="M280 192 L288 187 C290 186, 289 184, 286 185 L280 189Z" fill="#c04030"/>
+      </g>
+
+      <!-- Left paw (resting on lap/stool) -->
+      <ellipse cx="155" cy="342" rx="10" ry="6" fill="#e0dbd4" stroke="#bbb5ab" stroke-width="0.8"/>
+    </g>
+
+    <!-- === PAINT PALETTE === -->
+    <g id="palette">
+      <!-- Palette shape -->
+      <ellipse cx="310" cy="408" rx="40" ry="18" fill="#daa520" stroke="#b8860b" stroke-width="1.5" transform="rotate(-5 310 408)"/>
+      <!-- Thumb hole -->
+      <ellipse cx="295" cy="405" rx="6" ry="4" fill="#fdfcfa"/>
+
+      <!-- Paint blobs -->
+      <circle cx="305" cy="398" r="5" fill="#e04040"/>
+      <circle cx="318" cy="396" r="4.5" fill="#2d8b2d"/>
+      <circle cx="330" cy="400" r="4" fill="#2060c0"/>
+      <circle cx="322" cy="410" r="4.5" fill="#f0e040"/>
+      <circle cx="308" cy="414" r="4" fill="#e06820"/>
+      <circle cx="335" cy="412" r="3.5" fill="#8030a0"/>
+
+      <!-- Extra brush on palette -->
+      <line x1="340" y1="420" x2="360" y2="402" stroke="#c49a6c" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="361" cy="401" r="2.5" fill="#2060c0"/>
+    </g>
+
+    <!-- Ground shadows -->
+    <ellipse cx="170" cy="415" rx="50" ry="6" fill="#d5d0c5" opacity="0.4"/>
+    <ellipse cx="330" cy="415" rx="60" ry="7" fill="#d5d0c5" opacity="0.3"/>
+
+  </g>
+
+  <!-- === TEXT === -->
+  <text x="250" y="480" text-anchor="middle"
+        font-family="'Arial Black', 'Impact', sans-serif"
+        font-weight="900" font-size="42" fill="#1a1a1a"
+        letter-spacing="2">BLANK CANVAS GAMES</text>
+</svg>

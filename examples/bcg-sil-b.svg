@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 240" role="img">
+  <title>Blank Canvas Games - Cat at easel silhouette</title>
+  <g fill="#1a1a1a">
+    <!-- Cat: cleaner approach, distinct head + body + tail -->
+
+    <!-- Head (round with ears) -->
+    <ellipse cx="88" cy="88" rx="22" ry="20"/>
+    <!-- Left ear -->
+    <path d="M70 78 C66 62, 62 48, 60 42 C58 38, 64 40, 66 44 C70 52, 74 64, 76 72 Z"/>
+    <!-- Right ear -->
+    <path d="M100 74 C102 60, 104 46, 106 40 C108 36, 112 38, 110 42 C108 52, 104 64, 102 72 Z"/>
+
+    <!-- Body (sitting upright, slight pear shape) -->
+    <path d="
+      M72 104 C66 112, 60 128, 62 148
+      C64 158, 70 164, 80 164
+      L96 164
+      C106 164, 110 156, 108 146
+      C106 130, 102 114, 98 104
+    "/>
+
+    <!-- Front paw area -->
+    <ellipse cx="70" cy="162" rx="12" ry="5"/>
+    <ellipse cx="96" cy="162" rx="12" ry="5"/>
+
+    <!-- Arm reaching to paintbrush -->
+    <path d="
+      M100 108 C108 104, 118 100, 128 98
+      C134 96, 138 100, 132 102
+      C124 106, 114 108, 106 112
+      Z
+    "/>
+
+    <!-- Tail - long sweeping curve -->
+    <path d="
+      M62 150
+      C52 158, 38 174, 30 186
+      C24 196, 22 204, 26 206
+      C30 208, 34 202, 38 194
+      C44 178, 54 166, 64 158
+    "/>
+
+    <!-- Paintbrush -->
+    <line x1="128" y1="98" x2="160" y2="84" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M160 84 L168 80 C170 78, 168 76, 166 78 L160 82 Z"/>
+
+    <!-- Easel -->
+    <rect x="170" y="56" width="6" height="8" rx="2"/>
+    <rect x="162" y="64" width="42" height="4" rx="1"/>
+    <rect x="164" y="68" width="38" height="62" rx="1" fill="#fff" stroke="#1a1a1a" stroke-width="3.5"/>
+    <rect x="160" y="128" width="46" height="5" rx="1"/>
+    <path d="M166 133 L154 200 M200 133 L212 200 M183 64 L196 200"
+          stroke="#1a1a1a" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <line x1="158" y1="172" x2="208" y2="172" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Stool -->
+    <ellipse cx="82" cy="166" rx="26" ry="6"/>
+    <path d="M60 170 L52 204 M104 170 L112 204"
+          stroke="#1a1a1a" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <line x1="56" y1="190" x2="108" y2="190" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

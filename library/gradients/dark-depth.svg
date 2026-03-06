@@ -1,0 +1,11 @@
+<!-- snippet: gradient-dark-depth -->
+<!-- tags: gradient, dark, depth, subtle, background -->
+<!-- usage: <rect fill="url(#gradient-dark-depth)" .../> -->
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="gradient-dark-depth" cx="30%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#1a2a44"/>
+      <stop offset="100%" stop-color="#0b1220"/>
+    </radialGradient>
+  </defs>
+</svg>

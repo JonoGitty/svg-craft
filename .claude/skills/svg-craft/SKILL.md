@@ -1,6 +1,6 @@
 ---
 name: svg-craft
-description: Create, optimise, and theme SVG images for websites — trace from PNGs/PDFs, match site colour palettes, build icons/illustrations/logos
+description: Create, optimise, and theme SVG images for websites — trace from PNGs/PDFs, match site colour palettes, build icons/illustrations/logos, manage a reusable snippet library
 user-invocable: true
 argument-hint: "[describe the SVG you need, or provide an image/URL to work from]"
 allowed-tools: Bash, Read, Edit, Write, Grep, Glob, WebFetch, Agent
@@ -20,72 +20,82 @@ Use /svg-craft when the user needs:
 - Animated SVGs (CSS or SMIL animations)
 - Responsive/accessible SVGs with proper viewBox, roles, and titles
 - Batch generation of a consistent icon set
+- A favicon, og:image, or social preview graphic
+- To browse or add to their SVG snippet library
 
 ## Capabilities
 
 ### 1. Create SVGs from scratch
-Write clean, hand-coded SVG markup. Prefer semantic shapes (`<rect>`, `<circle>`, `<path>`) over opaque path dumps. Use `viewBox` for scalability.
+Write clean, hand-coded SVG markup. Prefer semantic shapes (`<rect>`, `<circle>`, `<path>`) over opaque path dumps. Use `viewBox` for scalability. Check the snippet library first for reusable parts.
 
 ### 2. Trace / emulate from raster images (PNG, JPG, PDF)
 - Use the **Read** tool to view the source image visually
-- Analyse the shapes, colours, layout, and style
-- Recreate the image as clean SVG markup, simplifying where appropriate
-- For complex images, break into layers: background, main subject, details
-- Preserve the visual intent rather than pixel-perfect tracing
+- For **geometric / icon-style** images: recreate by hand using SVG primitives
+- For **organic / complex** images: use **potrace** via Bash if installed, or advise the user to install it. Do NOT attempt to hand-code organic shapes (animals, faces, maps) — it doesn't work.
+- For **website screenshots**: use **Playwright** to capture, then analyse
 
 ### 3. Match website themes
 - Use **WebFetch** to retrieve the target website's HTML/CSS
-- Extract the colour palette (primary, secondary, accent, background, text colours)
-- Identify the site's design language (rounded vs sharp, minimal vs detailed, flat vs gradient)
-- Apply these styles to the SVG output so it fits seamlessly
+- Optionally use **Playwright** (`npx playwright screenshot`) to capture a visual screenshot for context
+- Extract the colour palette from CSS custom properties, meta tags, and class patterns
+- Apply the extracted palette to SVG output using CSS custom properties for adaptability
 
 ### 4. Optimise existing SVGs
-- Remove unnecessary metadata, comments, and editor cruft
-- Simplify paths and merge redundant groups
-- Convert inline styles to attributes where smaller
-- Ensure proper `viewBox`, remove fixed `width`/`height` for responsiveness
-- Add `role="img"` and `<title>` for accessibility
+- Use **svgo** via Bash if installed: `svgo input.svg -o output.svg`
+- Manual cleanup if svgo isn't available (see CONTEXT.md checklist)
 
 ### 5. Animate SVGs
 - CSS animations for hover effects, loading spinners, transitions
 - SMIL for path morphing and complex sequenced animations
-- Keep animations performant (prefer `transform` and `opacity`)
+- Check `library/animations/` for ready-made animation snippets
+
+### 6. Generate common assets
+- **Favicon**: Use `library/templates/favicon.svg` as base. Design at 32x32, test at 16x16.
+- **OG image**: Use `library/templates/og-image.svg` as base. 1200x630 standard.
+- **Icon sets**: Use `library/templates/icon-set-base.svg` for consistent 24x24 icons.
+
+### 7. Snippet library management
+The library lives at `C:/ai/svg-craft/library/` with these categories:
+- `gradients/` — reusable gradient defs
+- `patterns/` — repeating patterns (dots, grid, noise)
+- `icons/` — icon collection
+- `shapes/` — common shapes (badges, frames, splats)
+- `animations/` — animation snippets (spinner, pulse, fade)
+- `palettes/` — colour palettes extracted from websites
+- `templates/` — full SVG templates (favicon, og-image, icon-set)
+
+**When generating SVGs:**
+1. Check the library first for reusable snippets
+2. After generating, ask the user if they want to save any reusable parts to the library
+3. When the user asks to "browse the library" or "show me what's available", list the contents with descriptions
+
+**When the user wants to build their library:**
+- Ask what categories they want to add to (gradients, patterns, icons, shapes, animations)
+- Generate snippets and save with the standard header format (see library/README.md)
+- Each snippet needs: `<!-- snippet: name -->`, `<!-- tags: ... -->`, `<!-- usage: ... -->`
 
 ## Approach
 
 1. **Understand the brief** — What is the SVG for? Where will it appear? What style?
-2. **Gather references** — Read any provided images (PNG/JPG/PDF) with the Read tool. Fetch the target website with WebFetch if a URL is given.
-3. **Extract the palette** — If matching a site theme, pull colours from CSS custom properties, key element styles, or visible branding.
-4. **Design the SVG** — Write clean SVG code. Use descriptive IDs, logical grouping with `<g>`, and CSS classes for theming.
-5. **Review and refine** — Check the SVG visually by reading it back. Optimise the markup. Ensure accessibility attributes are present.
-6. **Deliver** — Write the SVG file to the requested location. Provide usage notes (recommended size, dark-mode variants, animation triggers).
+2. **Check the library** — Scan `library/` for relevant snippets, gradients, or templates
+3. **Gather references** — Read any provided images with Read. Fetch target website with WebFetch. Screenshot with Playwright if needed.
+4. **Extract the palette** — If matching a site theme, pull colours from CSS and save to `library/palettes/`
+5. **Design the SVG** — Write clean SVG code. Use library snippets where available.
+6. **Preview** — Generate a preview using `tools/preview.html` (copy it next to the SVGs, open in browser). Show at multiple sizes on light and dark backgrounds.
+7. **Optimise** — Run `svgo` if installed, or manual cleanup
+8. **Offer to save** — Ask the user if any reusable parts (gradients, shapes, patterns) should be saved to the library
+9. **Deliver** — Write the SVG file to the requested location. Provide usage notes.
 
-## SVG Best Practices
+## External tools (check availability, offer to install)
 
-```xml
-<!-- Always include viewBox, omit width/height for responsiveness -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img">
-  <title>Descriptive title for accessibility</title>
-  <!-- Use CSS custom properties for easy theming -->
-  <style>
-    .primary { fill: var(--svg-primary, #1a1a2e); }
-    .accent  { fill: var(--svg-accent, #e94560); }
-  </style>
-  <g id="icon-name">
-    <!-- Semantic shapes over raw paths where possible -->
-  </g>
-</svg>
-```
+| Tool | Check | Install | What it does |
+|------|-------|---------|-------------|
+| svgo | `which svgo` | `npm i -g svgo` | Optimise SVGs — strips junk, simplifies paths |
+| potrace | `which potrace` | See tools/README.md | Trace raster images to vector paths |
+| sharp-cli | `which sharp` | `npm i -g sharp-cli` | Convert/resize images before tracing |
+| playwright | `npx playwright --version` | `npx playwright install chromium` | Screenshot websites for visual analysis |
 
-### Colour strategy
-- Use CSS custom properties (`var(--name, fallback)`) so SVGs adapt to light/dark modes
-- When matching a website, map: brand colour -> primary fill, accent -> highlights, background -> negative space
-- Provide both a themed version and a standalone version with hardcoded colours
-
-### File size targets
-- Simple icons: < 1 KB
-- Illustrations: < 5 KB
-- Complex traced artwork: < 20 KB (simplify if larger)
+Before using any external tool, check if it's installed. If not, explain what it does and ask the user if they want to install it. See `tools/README.md` for full docs.
 
 ## Other skills to combine with
 

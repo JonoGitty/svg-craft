@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img">
+  <title>Blank Canvas Games</title>
+  <!-- Concept I: Dice meets paintbrush - hybrid icon -->
+  <defs>
+    <linearGradient id="face-i" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c6ff7"/>
+      <stop offset="100%" stop-color="#5b52d4"/>
+    </linearGradient>
+    <linearGradient id="side-i" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5b52d4"/>
+      <stop offset="100%" stop-color="#3d2fa0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 3D Die - top face -->
+  <path d="M100 32 L168 68 L100 104 L32 68 Z" fill="url(#face-i)"/>
+  <!-- Die - left face -->
+  <path d="M32 68 L100 104 L100 172 L32 136 Z" fill="url(#side-i)"/>
+  <!-- Die - right face -->
+  <path d="M168 68 L100 104 L100 172 L168 136 Z" fill="#4838b0"/>
+
+  <!-- Dots on top face -->
+  <circle cx="78" cy="62" r="5" fill="#fff" opacity="0.9"/>
+  <circle cx="100" cy="68" r="5" fill="#fff" opacity="0.9"/>
+  <circle cx="122" cy="74" r="5" fill="#fff" opacity="0.0"/>
+  <!-- Dots on left face -->
+  <circle cx="56" cy="96" r="4.5" fill="#fff" opacity="0.7"/>
+  <circle cx="76" cy="140" r="4.5" fill="#fff" opacity="0.7"/>
+  <!-- Dots on right face -->
+  <circle cx="144" cy="96" r="4.5" fill="#fff" opacity="0.6"/>
+  <circle cx="134" cy="114" r="4.5" fill="#fff" opacity="0.6"/>
+  <circle cx="124" cy="132" r="4.5" fill="#fff" opacity="0.6"/>
+  <circle cx="114" cy="150" r="4.5" fill="#fff" opacity="0.6"/>
+
+  <!-- Paintbrush leaning against the die -->
+  <g transform="rotate(-20 160 140)">
+    <rect x="156" y="80" width="8" height="52" rx="3" fill="#c49a6c"/>
+    <rect x="155" y="130" width="10" height="8" rx="1" fill="#aaa"/>
+    <path d="M155 138 L157 154 C158 158, 162 158, 163 154 L165 138 Z" fill="#22d3ee"/>
+  </g>
+
+  <!-- Paint drip from brush tip -->
+  <circle cx="148" cy="182" r="4" fill="#22d3ee" opacity="0.6"/>
+  <circle cx="152" cy="174" r="2.5" fill="#22d3ee" opacity="0.4"/>
+</svg>

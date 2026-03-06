@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>SVG Craft — Preview</title>
+<style>
+  :root { --bg: #f0f0f0; --card: #fff; --text: #333; --muted: #999; --border: #e0e0e0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0c1a2e; --card: #1a1a2e; --text: #e8e8ec; --muted: #666; --border: #2a2a3e; }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); font-family: system-ui; color: var(--text); padding: 24px; }
+  h1 { text-align: center; font-size: 18px; margin-bottom: 4px; }
+  .meta { text-align: center; font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+  .controls { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+  .controls button { padding: 6px 16px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: var(--text); cursor: pointer; font-size: 13px; }
+  .controls button.active { border-color: #7c6ff7; background: #7c6ff7; color: #fff; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
+  .card h3 { font-size: 13px; margin-bottom: 12px; }
+  .card .main { display: block; margin: 0 auto 12px; max-width: 100%; }
+  .sizes { display: flex; gap: 14px; align-items: flex-end; justify-content: center; padding-top: 12px; border-top: 1px solid var(--border); }
+  .sizes div { text-align: center; }
+  .sizes .label { font-size: 9px; color: var(--muted); margin-top: 2px; }
+  .bg-strip { padding: 32px; border-radius: 14px; max-width: 1200px; margin: 24px auto; text-align: center; }
+  .bg-strip h2 { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .bg-strip .row { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; align-items: center; }
+  .bg-strip .row div { text-align: center; }
+  .bg-strip .label { font-size: 10px; color: var(--muted); margin-top: 4px; }
+  .bg-dark { background: #0b1220; }
+  .bg-light { background: #fafafa; }
+  .bg-mid { background: #1a1a2e; }
+  .drop-zone { border: 2px dashed var(--border); border-radius: 14px; padding: 40px; text-align: center; color: var(--muted); margin: 0 auto 24px; max-width: 600px; cursor: pointer; }
+  .drop-zone.over { border-color: #7c6ff7; background: rgba(124,111,247,0.05); }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<h1>SVG Craft Preview</h1>
+<p class="meta">Drop SVG files below or they'll be auto-loaded from the same directory</p>
+
+<div class="drop-zone" id="dropZone">
+  Drop SVG files here, or click to select
+  <input type="file" id="fileInput" accept=".svg" multiple class="hidden"/>
+</div>
+
+<div class="controls" id="controls"></div>
+
+<div class="grid" id="gallery"></div>
+
+<div class="bg-strip bg-dark" id="darkStrip">
+  <h2>On dark background (#0b1220)</h2>
+  <div class="row" id="darkRow"></div>
+</div>
+
+<div class="bg-strip bg-light" id="lightStrip">
+  <h2>On light background (#fafafa)</h2>
+  <div class="row" id="lightRow"></div>
+</div>
+
+<div class="bg-strip bg-mid" id="midStrip">
+  <h2>On mid background (#1a1a2e)</h2>
+  <div class="row" id="midRow"></div>
+</div>
+
+<script>
+const svgs = [];
+const gallery = document.getElementById('gallery');
+const darkRow = document.getElementById('darkRow');
+const lightRow = document.getElementById('lightRow');
+const midRow = document.getElementById('midRow');
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+
+const sizes = [160, 64, 32, 16];
+
+function addSVG(name, url) {
+  svgs.push({ name, url });
+  renderAll();
+}
+
+function renderAll() {
+  gallery.innerHTML = '';
+  darkRow.innerHTML = '';
+  lightRow.innerHTML = '';
+  midRow.innerHTML = '';
+
+  svgs.forEach(({ name, url }) => {
+    // Gallery card
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <h3>${name}</h3>
+      <img class="main" src="${url}" width="180" height="180"/>
+      <div class="sizes">
+        ${sizes.slice(1).map(s => `<div><img src="${url}" width="${s}" height="${s}"/><div class="label">${s}px</div></div>`).join('')}
+      </div>
+    `;
+    gallery.appendChild(card);
+
+    // Background strips
+    [darkRow, lightRow, midRow].forEach(row => {
+      const div = document.createElement('div');
+      div.innerHTML = `<img src="${url}" width="80" height="80"/><div class="label">${name}</div>`;
+      row.appendChild(div);
+    });
+  });
+}
+
+// Drag and drop
+dropZone.addEventListener('click', () => fileInput.click());
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('over'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('over'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('over');
+  handleFiles(e.dataTransfer.files);
+});
+fileInput.addEventListener('change', e => handleFiles(e.target.files));
+
+function handleFiles(files) {
+  for (const file of files) {
+    if (!file.name.endsWith('.svg')) continue;
+    const url = URL.createObjectURL(file);
+    addSVG(file.name.replace('.svg', ''), url);
+  }
+}
+
+// Auto-load SVGs passed via URL params: ?files=a.svg,b.svg
+const params = new URLSearchParams(location.search);
+if (params.has('files')) {
+  params.get('files').split(',').forEach(f => {
+    addSVG(f.replace('.svg', ''), f);
+  });
+}
+</script>
+</body>
+</html>

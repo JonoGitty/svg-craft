@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>BCG Silhouette Round 2</title>
+<style>
+  body { background: #f5f5f5; font-family: system-ui; margin: 0; padding: 24px; }
+  h1 { text-align: center; color: #333; }
+  p.sub { text-align: center; color: #888; margin-top: 0; }
+  .row { display: flex; gap: 48px; justify-content: center; align-items: flex-start; margin: 40px 0; flex-wrap: wrap; }
+  .variant { text-align: center; max-width: 300px; }
+  .variant h2 { font-size: 15px; color: #555; margin-bottom: 4px; }
+  .variant p { font-size: 12px; color: #999; margin-top: 0; }
+  .sizes { display: flex; gap: 20px; align-items: flex-end; justify-content: center; margin-top: 12px; }
+  .label { font-size: 10px; color: #aaa; margin-top: 4px; text-align: center; }
+  .dark { background: #1a1a2e; padding: 40px 24px; border-radius: 16px; margin: 40px auto; max-width: 900px; }
+  .dark h2 { color: #e8e8ec; text-align: center; font-size: 14px; margin: 0 0 20px; }
+  .dark img { filter: invert(1); }
+  .dark .label { color: #555; }
+  .site-bg { background: #0b1220; padding: 40px 24px; border-radius: 16px; margin: 40px auto; max-width: 900px; }
+  .site-bg h2 { color: #cbd5e1; text-align: center; font-size: 14px; margin: 0 0 20px; }
+  .site-bg img { filter: invert(1); }
+  .site-bg .label { color: #445; }
+  .orig { border: 1px solid #ddd; border-radius: 8px; padding: 8px; background: #fff; }
+</style>
+</head>
+<body>
+<h1>BCG Silhouette - Round 2</h1>
+<p class="sub">Smoother cat shapes, three approaches. Compare with original below.</p>
+
+<div style="text-align:center; margin: 20px 0;">
+  <h2 style="font-size:13px; color:#888;">Original for reference:</h2>
+  <img class="orig" src="file:///C:/ai/BasilBoardGamesWebsite/links-site/assets/logo.png" width="120" height="120"/>
+</div>
+
+<div class="row">
+  <div class="variant">
+    <h2>A — Single fluid path</h2>
+    <p>One continuous shape for the whole cat body + tail</p>
+    <img src="bcg-sil-a.svg" width="260" height="240"/>
+    <div class="sizes">
+      <div><img src="bcg-sil-a.svg" width="80" height="74"/><div class="label">80px</div></div>
+      <div><img src="bcg-sil-a.svg" width="40" height="37"/><div class="label">40px</div></div>
+      <div><img src="bcg-sil-a.svg" width="20" height="18"/><div class="label">20px</div></div>
+    </div>
+  </div>
+
+  <div class="variant">
+    <h2>B — Separate head + body</h2>
+    <p>Distinct round head with ears, pear-shaped body, cleaner anatomy</p>
+    <img src="bcg-sil-b.svg" width="260" height="240"/>
+    <div class="sizes">
+      <div><img src="bcg-sil-b.svg" width="80" height="74"/><div class="label">80px</div></div>
+      <div><img src="bcg-sil-b.svg" width="40" height="37"/><div class="label">40px</div></div>
+      <div><img src="bcg-sil-b.svg" width="20" height="18"/><div class="label">20px</div></div>
+    </div>
+  </div>
+
+  <div class="variant">
+    <h2>C — Bold + iconic</h2>
+    <p>Thickest strokes, chunkiest shapes, reads at any size</p>
+    <img src="bcg-sil-c.svg" width="260" height="240"/>
+    <div class="sizes">
+      <div><img src="bcg-sil-c.svg" width="80" height="74"/><div class="label">80px</div></div>
+      <div><img src="bcg-sil-c.svg" width="40" height="37"/><div class="label">40px</div></div>
+      <div><img src="bcg-sil-c.svg" width="20" height="18"/><div class="label">20px</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="dark">
+  <h2>On dark background (white silhouette)</h2>
+  <div class="row" style="margin:0; gap:40px;">
+    <div><img src="bcg-sil-a.svg" width="180" height="166"/><div class="label">A</div></div>
+    <div><img src="bcg-sil-b.svg" width="180" height="166"/><div class="label">B</div></div>
+    <div><img src="bcg-sil-c.svg" width="180" height="166"/><div class="label">C</div></div>
+  </div>
+</div>
+
+<div class="site-bg">
+  <h2>At favicon/small sizes on site background (#0b1220)</h2>
+  <div class="sizes" style="justify-content:center; gap:32px;">
+    <div><img src="bcg-sil-a.svg" width="32" height="30"/><div class="label">A 32px</div></div>
+    <div><img src="bcg-sil-b.svg" width="32" height="30"/><div class="label">B 32px</div></div>
+    <div><img src="bcg-sil-c.svg" width="32" height="30"/><div class="label">C 32px</div></div>
+    <div style="width:20px"></div>
+    <div><img src="bcg-sil-a.svg" width="16" height="15"/><div class="label">A 16px</div></div>
+    <div><img src="bcg-sil-b.svg" width="16" height="15"/><div class="label">B 16px</div></div>
+    <div><img src="bcg-sil-c.svg" width="16" height="15"/><div class="label">C 16px</div></div>
+  </div>
+</div>
+
+</body>
+</html>

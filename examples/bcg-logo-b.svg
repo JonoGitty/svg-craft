@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img">
+  <title>Blank Canvas Games</title>
+  <!-- Concept B: Paint palette with game dice/pieces as the paint blobs -->
+  <defs>
+    <linearGradient id="pal-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2c2c33"/>
+      <stop offset="100%" stop-color="#1a1a1e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Palette shape -->
+  <path d="
+    M100 28
+    C148 28, 178 52, 178 88
+    C178 108, 168 126, 152 138
+    C140 148, 130 158, 130 168
+    C130 180, 118 180, 112 170
+    C106 162, 100 156, 88 152
+    C60 142, 28 118, 28 82
+    C28 48, 58 28, 100 28
+    Z
+  " fill="url(#pal-grad)" stroke="#e8e8ec" stroke-width="3"/>
+
+  <!-- Thumb hole -->
+  <ellipse cx="72" cy="68" rx="16" ry="14" fill="#0b1220" stroke="#334155" stroke-width="2"/>
+
+  <!-- "Paint blobs" that are game symbols -->
+
+  <!-- Blob 1: Die face -->
+  <g transform="translate(110, 52)">
+    <rect x="-12" y="-12" width="24" height="24" rx="5" fill="#7c6ff7"/>
+    <circle cx="-5" cy="-5" r="2" fill="#fff"/>
+    <circle cx="5" cy="-5" r="2" fill="#fff"/>
+    <circle cx="0" cy="0" r="2" fill="#fff"/>
+    <circle cx="-5" cy="5" r="2" fill="#fff"/>
+    <circle cx="5" cy="5" r="2" fill="#fff"/>
+  </g>
+
+  <!-- Blob 2: Game controller / d-pad -->
+  <g transform="translate(148, 88)" fill="#22d3ee">
+    <rect x="-4" y="-12" width="8" height="24" rx="2"/>
+    <rect x="-12" y="-4" width="24" height="8" rx="2"/>
+  </g>
+
+  <!-- Blob 3: Star / token -->
+  <g transform="translate(130, 128)">
+    <path d="M0 -10 L3 -3 L10 -3 L5 2 L7 10 L0 6 L-7 10 L-5 2 L-10 -3 L-3 -3 Z" fill="#38bdf8"/>
+  </g>
+
+  <!-- Blob 4: Heart / life -->
+  <g transform="translate(80, 120)">
+    <path d="M0 4 C-2 0, -8 -4, -8 -8 C-8 -12, -4 -14, 0 -10 C4 -14, 8 -12, 8 -8 C8 -4, 2 0, 0 4 Z" fill="#e94560"/>
+  </g>
+
+  <!-- Blob 5: Small circle token -->
+  <circle cx="56" cy="104" r="8" fill="#16a34a"/>
+  <circle cx="56" cy="104" r="4" fill="#0b1220"/>
+</svg>
