@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img">
+  <title>SVG Craft logo</title>
+  <style>
+    .primary { fill: var(--svg-primary, #1a1a2e); }
+    .accent  { fill: var(--svg-accent, #e94560); }
+  </style>
+  <g id="svg-craft-logo">
+    <rect class="primary" x="2" y="2" width="20" height="20" rx="3"/>
+    <path class="accent" d="M7 12 L10 8 L13 14 L16 10 L19 16 H5 Z" opacity="0.9"/>
+    <circle class="accent" cx="8" cy="7" r="2"/>
+  </g>
+</svg>

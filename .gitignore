@@ -1,0 +1,55 @@
+# Personal / private files
+_private*/
+private/
+personal/
+drafts/
+scratch/
+*.local
+*.private
+
+# Client-specific work
+clients/
+projects/
+
+# Source images used for tracing (may contain copyrighted material)
+sources/
+references/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# Allow example SVGs but ignore working SVGs in root
+/*.svg
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node (if tooling is added)
+node_modules/
+package-lock.json
+
+# Python (if tooling is added)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Claude Code local state
+.claude/settings.local.json
